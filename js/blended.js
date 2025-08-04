@@ -1,9 +1,6 @@
-let productName = "Droid";
-let pricePerItem = 2000;
+const age = 16;
+const isAdult = age >= 18;
 
-// Change code below this line
-productName = "Repair droid";
-pricePerItem = pricePerItem + 1500;
+console.log(`возвраст: ${age}`);
+console.log(`взрослый: ${isAdult}`);
 
-console.log(productName);
-console.log(pricePerItem);
