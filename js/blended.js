@@ -1,10 +1,9 @@
-const styles = [`jazz`, `blues`];
-styles.push(`rock-n-roll`);
-let bluesIndex = styles.indexOf('blues');
-function logItems(array) {
-    console.log();
-    for (let i = 0; i < array.length; i++) {
-        console.log(`${i + 1} - ${array[i]}`);
-    }
-}
-logItems(styles);
+let productName = "Droid";
+let pricePerItem = 2000;
+
+// Change code below this line
+productName = "Repair droid";
+pricePerItem = pricePerItem + 1500;
+
+console.log(productName);
+console.log(pricePerItem);
