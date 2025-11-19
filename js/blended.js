@@ -109,20 +109,115 @@
 // console.log(getFileName('index.html')); // "index"
 // console.log(getFileName('index.css')); // "index"
 // console.log(getFileName('index')); // "index"
-// =====================================================
-// function checkAge(age) {
-//   let isAdult;
+// =========================================
+// function getSlice(array, value) {
+//   const index = array.indexOf(value);
 
-//   if (age >= 18) {
-//     isAdult = true;
-//   } else {
-//     isAdult = false;
+//   if (index === -1) {
+//     return [];
 //   }
-
-//   return isAdult;
+//   return array.slice(0, index + 1);
 // }
 
-// console.log(checkAge(8)); // false
-// console.log(checkAge(14)); // false
-// console.log(checkAge(20)); // true
-// console.log(checkAge(37)); // true
+// const getSlice = (array, value) => array.slice(0, array.indexOf(value) + 1);
+
+// console.log(getSlice(['Mango', 'Poly', 'Ajax'], 'Poly')); // ["Mango", "Poly"]
+// console.log(getSlice(['Mango', 'Poly', 'Ajax'], 'Ajax')); // ["Mango", "Poly", "Ajax"]
+// console.log(getSlice(['Mango', 'Poly', 'Ajax'], 'Mango')); // ["Mango"]
+// console.log(getSlice(['Mango', 'Poly', 'Ajax'], 'Jacob')); // []
+// console.log(getSlice(['Mango', 'Poly', 'Ajax'], 'Casey')); // []
+// ==============================================
+// function getCommonElements(array1, array2) {
+//   const commonElements = [];
+
+//   for (let i = 0; i < array1.length; i++) {
+//     if (array2.includes(array1[i])) {
+//       commonElements.push(array1[i]);
+//     }
+//   }
+//   return commonElements;
+// }
+
+// // Тесты
+
+// console.log(getCommonElements([1, 2, 3], [2, 4])); // [2]
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19])); // [1, 2]
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])); // [12, 27, 3]
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40])); // [10, 30, 40]
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30])); // []
+// console.log(getCommonElements([5, 7, 9], [9, 5, 1, 7])); // [5, 7, 9]
+// ====================================
+// function getEvenNumbers(start, end) {
+//   const evenNumbers = [];
+
+//   for (let i = start; i <= end; i++) {
+//     if (i % 2 === 0) {
+//       evenNumbers.push(i);
+//     }
+//   }
+//   return evenNumbers;
+// }
+// console.log(getEvenNumbers(2, 5)); // [2, 4]
+// console.log(getEvenNumbers(3, 11)); // [4, 6, 8, 10]
+// console.log(getEvenNumbers(6, 12)); // [6, 8, 10, 12]
+// console.log(getEvenNumbers(8, 8)); // [8]
+// console.log(getEvenNumbers(7, 7)); // []
+// console.log(getEvenNumbers(1, 1)); // [] (непарне число)
+// console.log(getEvenNumbers(10, 15)); // [10, 12, 14]
+// ===========================================
+// function multiply() {
+//   let total = 1;
+
+//   for (const arg of arguments) {
+//     total *= arg;
+//   }
+//   return total;
+// }
+
+// console.log(multiply(1, 2, 3)); //  6
+// console.log(multiply(1, 2, 3, 4)); //  24
+// console.log(multiply(1, 2, 3, 4, 5)); //  120
+// ===========================================
+// function createReversedArray() {
+//   return Array.from(arguments).toReversed();
+// }
+// console.log(createReversedArray(12, 85, 37, 4)); // [4, 37, 85, 12]
+// console.log(createReversedArray(164, 48, 291)); // [291, 48, 164]
+// console.log(createReversedArray(412, 371, 94, 63, 176)); // [176, 63, 94, 371, 412]
+// console.log(createReversedArray()); // []
+// console.log(createReversedArray(42)); // [42]
+// ===========================================
+// function findShortestWord(string) {
+//   const words = string.split(' ');
+//   let shortestWord = words[0];
+
+//   for (const word of words) {
+//     if (word.length < shortestWord.length) {
+//       shortestWord = word;
+//     }
+//   }
+//   return shortestWord;
+// }
+// console.log(findShortestWord('The quick brown fox jumped over the lazy dog')); // "The"
+// console.log(findShortestWord('Google do a roll')); // "a"
+// console.log(findShortestWord('May the force be with you')); // "be"
+// ===========================================
+// const planets = ['Earth', 'Mars', 'Venus'];
+// console.log(planets.length); // 3
+// const numbers = [1, 2, 3, 4, 5];
+// console.log(numbers.length); // 5
+// const mixed = ['apple', 10, true];
+// console.log(mixed.length); // 3
+// mixed[1] = 20;
+// console.log(mixed); // ['apple', 20, true]
+// ===========================================
+// function getExtremeElements(array) {
+//   const firstEl = array[0];
+//   const lastEl = array[array.length - 1];
+//   return [firstEl, lastEl];
+//   //   return [array[0], array[array.length - 1]];
+// }
+// console.log(getExtremeElements([1, 2, 3, 4, 5])); // [1, 5]
+// console.log(getExtremeElements(['Earth', 'Mars', 'Venus'])); // ["Earth", "Venus"]
+// console.log(getExtremeElements(['apple', 'peach', 'pear', 'banana'])); // ["apple", "banana"]
+// ===================================================
