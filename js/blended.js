@@ -220,4 +220,55 @@
 // console.log(getExtremeElements([1, 2, 3, 4, 5])); // [1, 5]
 // console.log(getExtremeElements(['Earth', 'Mars', 'Venus'])); // ["Earth", "Venus"]
 // console.log(getExtremeElements(['apple', 'peach', 'pear', 'banana'])); // ["apple", "banana"]
-// ===================================================
+// ==============================================function getLength(array) {
+// function getLength(array) {
+//   // 1️⃣ Соединяем элементы массива в одну строку
+//   const str = array.join(' ');
+
+//   // 2️⃣ Считаем длину строки
+//   const length = str.length;
+
+//   // 3️⃣ Преобразуем строку обратно в массив символов
+//   const backToArray = str.split(' ');
+
+//   // 4️⃣ Возвращаем всё вместе (для наглядности)
+//   return {
+//     string: str,
+//     length: length,
+//     array: backToArray,
+//   };
+// }
+
+// console.log(getLength(['Mango', 'hurries', 'to', 'the', 'train']));
+// console.log(getLength(['M', 'a', 'n', 'g', 'o']));
+// console.log(getLength(['top', 'picks', 'for', 'you']));
+// -------------------------------------------------------------
+// function getCommonElements(array1, array2) {
+//   const commonEl = [];
+//   for (const num of array1) {
+//     if (array2.includes(num)) {
+//       commonEl.push(num);
+//     }
+//   }
+//   return commonEl;
+// }
+
+// console.log(getCommonElements([1, 2, 3], [2, 4])); // [2]
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19])); // [1, 2]
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])); // [12, 27, 3]
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40])); // [10, 30, 40]
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30])); // []
+// console.log(getCommonElements([5, 7, 9], [9, 5, 1, 7])); // [5, 7, 9]
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+function calculateTotalPrice(order) {
+  let total = 0;
+  for (const price of order) {
+    total += price;
+  }
+  return total;
+}
+
+console.log(calculateTotalPrice([12, 85, 37, 4])); // 138
+console.log(calculateTotalPrice([164, 48, 291])); // 503
+console.log(calculateTotalPrice([412, 371, 94, 63, 176])); // 1116
+console.log(calculateTotalPrice([])); // 0
